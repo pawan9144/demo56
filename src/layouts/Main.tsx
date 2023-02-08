@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { Suspense } from 'react'
-
-import { Loader } from '@/components'
+import { Loader } from '../components'
 
 import { Footer } from './Footer'
 import { Header } from './Header'

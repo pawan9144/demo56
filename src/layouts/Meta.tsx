@@ -2,8 +2,8 @@ import Head from 'next/head'
 import type { NextRouter } from 'next/router'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
-import { AppConfig } from '@/config'
-import { icons } from '@/assests'
+import { AppConfig } from '../config'
+import { icons } from '../assests'
 
 type IMetaProps = {
   title?: string
