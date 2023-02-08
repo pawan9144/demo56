@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
+    "build:stats": "cross-env ANALYZE=true npm run build",
+    "clean": "rimraf .next",
     "lint": "next lint",
-    "prettier:check": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write .",
-    "postinstall": "husky install",
-    "prepare": "husky install"
+    "lint:types": "tsc --noEmit --pretty",
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write",
+    "commit": "git-cz",
+    "prepare": "husky install && chmod ug+x .husky/*",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "next": "13.1.6",
